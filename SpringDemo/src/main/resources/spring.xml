@@ -6,3 +6,5 @@
         <property name="message" value="Hi"/>
     </bean>
 </beans>
+
+<!--hello -> object -->
