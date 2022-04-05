@@ -33,7 +33,7 @@ public class Triangle
 
     @Override
     public String toString() {
-        return "Triangle Coordinates : " +
+        return "****** Triangle Coordinates ******** " +
                 "\npoint1=" + getPoint1().toString() +
                 ",\npoint2=" + getPoint2().toString() +
                 ",\npoint3=" + getPoint3().toString() ;

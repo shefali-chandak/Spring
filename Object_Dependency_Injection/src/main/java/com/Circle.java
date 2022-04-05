@@ -22,8 +22,7 @@ public class Circle {
 
     @Override
     public String toString() {
-        System.out.println("******* CIRCLE POINT ********");
-        return "Circle : "+
+        return "****** Circle ****** "+
                 "\nradius=" + radius +
                 ",\ncenter=" + getPoint().toString();
     }
