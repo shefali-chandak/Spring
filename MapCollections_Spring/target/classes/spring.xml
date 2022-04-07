@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="singer" class="com.DID">
+        <property name="seasonName" value="Season1"/>
+
+        <property name="brandPartners">
+            <list>
+                <value>Mojo</value>
+                <value>BournVita</value>
+            </list>
+        </property>
+
+
+        <property name="participants">
+            <map>
+                <entry key-ref="participants1" value="Geeta"></entry>
+                <entry key-ref="participants2" value="Remo"></entry>
+                <entry key-ref="participants3" value="Terence"></entry>
+                <entry key-ref="participants4" value="Raghav"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="participants1" class="com.Participants">
+        <property name="name" value="Shefali"/>
+        <property name="address" value="Pune"></property>
+    </bean>
+    <bean id="participants2" class="com.Participants">
+        <property name="name" value="Neil"/>
+        <property name="address" value="Kasmir"></property>
+    </bean>
+    <bean id="participants3" class="com.Participants">
+        <property name="name" value="Ritu"/>
+        <property name="address" value="Indore"></property>
+    </bean>
+    <bean id="participants4" class="com.Participants">
+        <property name="name" value="Jiya"/>
+        <property name="address" value="Karad"></property>
+    </bean>
+
+</beans>
