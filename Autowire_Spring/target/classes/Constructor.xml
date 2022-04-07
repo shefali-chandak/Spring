@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="address" class="com.Address">
+        <property name="hName" value="SomwarPeth"></property>
+        <property name="city" value="Karad"></property>
+        <property name="state" value="Maharashtra"></property>
+    </bean>
+
+    <bean class="com.Student" id="student" autowire="constructor">
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <constructor-arg name="name" value="Shefali"></constructor-arg>
+        <!--        <property name="address" ref="address"></property>  without autowire-->
+    </bean>
+
+</beans>
+
