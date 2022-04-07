@@ -9,9 +9,21 @@
         <property name="state" value="Maharashtra"></property>
     </bean>
 
+    <bean id="address1" class="com.Address">
+        <property name="hName" value="Shaniwar"></property>
+        <property name="city" value="Pune"></property>
+        <property name="state" value="Maharashtra"></property>
+    </bean>
+
     <bean class="com.Student" id="student" autowire="byName">
         <property name="id" value="1"></property>
         <property name="name" value="Shefali"></property>
 <!--        <property name="address" ref="address"></property>  without autowire-->
+    </bean>
+
+    <bean class="com.Employee" id="employee" autowire="byName">
+        <property name="eid" value="1"></property>
+        <property name="name" value="Sharon"></property>
+        <!--        <property name="address" ref="address"></property>  without autowire-->
     </bean>
 </beans>

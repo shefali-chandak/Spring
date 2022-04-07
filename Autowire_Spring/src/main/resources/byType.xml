@@ -23,10 +23,10 @@
         <!--        <property name="address" ref="address"></property>  without autowire-->
     </bean>
 
-<!--    <bean class="com.Student" id="stud1"  autowire="byType">-->
-<!--        <property name="id" value="2"></property>-->
-<!--        <property name="name" value="Janhvi"></property>-->
-<!--    </bean>-->
+    <bean class="com.Student" id="stud1"  autowire="byType">
+        <property name="id" value="2"></property>
+        <property name="name" value="Janhvi"></property>
+    </bean>
 
 <!--    BUT YOU CAN CREATE 2 OF CLASS STUDENT       -->
 </beans>
