@@ -20,7 +20,7 @@ public class Main {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         do {
-            System.out.println("Enter choice: \n1.Insert\n2.Update\n3.Delete\n4.Fetch All\n5.Fetch By Criteria\n6.Exit");
+            System.out.println("Enter choice: \n1.Insert\n2.Update\n3.Delete\n4.Fetch All\n5.Fetch By Criteria\n6.fetchByLike\n7.fetch By Range\n8.Exit");
             int choice = Integer.parseInt(bufferedReader.readLine());
 
             switch (choice){
@@ -29,7 +29,8 @@ public class Main {
                     book.setBookName(bufferedReader.readLine());
                     book.setAuthorName(bufferedReader.readLine());
                     book.setPrice(Float.valueOf(bufferedReader.readLine()));
-                    bookDao.insertRecord(book);
+                    int i = bookDao.insertRecord(book);
+                    System.out.println("Data inserted");
                     break;
 
                 case 2:
@@ -37,12 +38,14 @@ public class Main {
                     String bookName = bufferedReader.readLine();
                     float price = Float.valueOf(bufferedReader.readLine());
                     bookDao.updateRecord(bookName,price);
+                    System.out.println("Data updated");
                     break;
 
                 case 3:
                     System.out.println("Enter bid to be deleted : ");
                     int bid = Integer.parseInt(bufferedReader.readLine());
                     bookDao.deleteRecord(bid);
+                    System.out.println("Data deleted");
                     break;
                 case 4:
                     List<Book> l = bookDao.fetchRecordsMapper();
@@ -59,6 +62,20 @@ public class Main {
                     }
                     break;
                 case 6:
+                    List<Book> list2 = bookDao.fetchByLike();
+                    for (Book b : list2){
+                        System.out.println(b);
+                    }
+                    break;
+                case 7:
+                    int begin = Integer.parseInt(bufferedReader.readLine());
+                    int end = Integer.parseInt(bufferedReader.readLine());
+                    List<Book> list3 = bookDao.fetchByRange(begin,end);
+                    for (Book b : list3){
+                        System.out.println(b);
+                    }
+                    break;
+                case 8:
                     System.out.println("THANKYOU!!!");
                     System.exit(0);
                     break;
